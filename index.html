@@ -1,146 +1,305 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عسيم - خدمات صحية متقدمة</title>
+    <title>محفظتي - تطبيق المحفظة الرقمية</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">عسيم</div>
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#doctors">الأطباء</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="app-container">
+        <!-- صفحة التسجيل -->
+        <div id="registerPage" class="page active">
+            <div class="register-container">
+                <div class="register-header">
+                    <div class="security-icon">🛡️</div>
+                    <h1>تسجيل البيانات</h1>
+                    <p>قم بإدخال بياناتك للمتابعة بأمان</p>
+                </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>مرحباً بك في عسيم</h1>
-            <p>خدمات صحية متقدمة وموثوقة لصحتك وصحة عائلتك</p>
-            <button class="btn btn-primary">احجز موعداً الآن</button>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>خدماتنا</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon">🏥</div>
-                    <h3>الاستشارات الطبية</h3>
-                    <p>استشارات طبية متخصصة من أفضل ال��طباء</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">💊</div>
-                    <h3>الصيدلية الإلكترونية</h3>
-                    <p>توصيل الأدوية مباشرة إلى منزلك</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">🧬</div>
-                    <h3>التحاليل الطبية</h3>
-                    <p>تحاليل دقيقة وسريعة النتائج</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">🚑</div>
-                    <h3>الإسعافات الأولية</h3>
-                    <p>خدمة إسعاف سريعة على مدار الساعة</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">🧘</div>
-                    <h3>الصحة النفسية</h3>
-                    <p>دعم نفسي واستشارات متخصصة</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">👶</div>
-                    <h3>رعاية الأطفال</h3>
-                    <p>متابعة صحية شاملة للأطفال</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Doctors Section -->
-    <section id="doctors" class="doctors">
-        <div class="container">
-            <h2>فريقنا الطبي</h2>
-            <div class="doctors-grid">
-                <div class="doctor-card">
-                    <div class="doctor-image">👨‍⚕️</div>
-                    <h3>د. أحمد علي</h3>
-                    <p>أخصائي القلب</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="doctor-card">
-                    <div class="doctor-image">👩‍⚕️</div>
-                    <h3>د. فاطمة محمود</h3>
-                    <p>أخصائية الأطفال</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="doctor-card">
-                    <div class="doctor-image">👨‍⚕️</div>
-                    <h3>د. محمد حسن</h3>
-                    <p>أخصائي الجراحة</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="doctor-card">
-                    <div class="doctor-image">👩‍⚕️</div>
-                    <h3>د. ليلى إبراهيم</h3>
-                    <p>أخصائية النساء والتوليد</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>تواصل معنا</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <h4>📞 الهاتف</h4>
-                        <p>+966 12 345 6789</p>
+                <form id="registerForm" class="register-form">
+                    <div class="form-group">
+                        <label>الاسم</label>
+                        <input type="text" id="fullName" placeholder="محمد أحمد..." required>
                     </div>
-                    <div class="info-item">
-                        <h4>📧 البريد الإلكتروني</h4>
-                        <p>info@asim-health.com</p>
+
+                    <div class="form-group">
+                        <label>الرصيد</label>
+                        <input type="number" id="balance" placeholder="0.00" step="0.01" required>
                     </div>
-                    <div class="info-item">
-                        <h4>📍 العنوان</h4>
-                        <p>الرياض - حي الملز</p>
+
+                    <div class="form-group">
+                        <label>رقم التحويل</label>
+                        <input type="text" id="transferNumber" placeholder="TRX-12345" required>
                     </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="اسمك" required>
-                    <input type="email" placeholder="بريدك الإلكتروني" required>
-                    <textarea placeholder="رسالتك" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">إرسال</button>
+
+                    <div class="form-group">
+                        <label>الضريبة</label>
+                        <input type="number" id="tax" placeholder="0.00" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>طريقة الدفع</label>
+                        <select id="paymentMethod" required>
+                            <option value="">اختر طريقة الدفع</option>
+                            <option value="orange">Orange Money</option>
+                            <option value="vodafon">Vodafon Cash</option>
+                            <option value="etisalat">Etisalat Cash</option>
+                            <option value="we">WePay</option>
+                            <option value="fawry">Fawry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>رقم المستخدم</label>
+                        <input type="text" id="userId" placeholder="UID-9876" required>
+                    </div>
+
+                    <button type="submit" class="register-btn">تسجيل</button>
                 </form>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 عسيم - خدمات صحية متقدمة. جميع الحقوق محفوظة.</p>
-            <div class="social-links">
-                <a href="#">فيسبوك</a>
-                <a href="#">تويتر</a>
-                <a href="#">إنستجرام</a>
+        <!-- صفحة المحفظة الرئيسية -->
+        <div id="walletPage" class="page">
+            <!-- Header بالمحفظة -->
+            <div class="wallet-header">
+                <div class="header-top">
+                    <button class="menu-btn">☰</button>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="wallet">المحفظة</button>
+                        <button class="tab-btn" data-tab="trading">منصة التداول</button>
+                    </div>
+                    <div class="icons">
+                        <button class="icon-btn">📋</button>
+                        <button class="icon-btn">🔔</button>
+                    </div>
+                </div>
+
+                <!-- بحث العملات -->
+                <div class="search-box">
+                    <input type="text" placeholder="الأوراق المالية الرائدة: SNDKon" class="search-input">
+                </div>
+            </div>
+
+            <!-- عرض الرصيد والمحفظة -->
+            <div class="wallet-section">
+                <div class="user-info">
+                    <div>
+                        <p class="label">اسم المستخدم:</p>
+                        <p id="displayName" class="value">محمد أحمد</p>
+                    </div>
+                    <div>
+                        <p class="label">رقم الحساب:</p>
+                        <p id="displayPhone" class="value">01113588888</p>
+                    </div>
+                </div>
+
+                <div class="wallet-card">
+                    <div class="wallet-info">
+                        <div class="balance-display">
+                            <p id="displayBalance" class="balance-amount">£32000.00</p>
+                            <p class="balance-change">↓ £32000.00 (0%)</p>
+                        </div>
+                        <button class="withdraw-btn">سحب الأموال</button>
+                    </div>
+                </div>
+
+                <div class="wallet-title">My Wallet</div>
+            </div>
+
+            <!-- قائمة الخيارات السريعة -->
+            <div class="menu-options">
+                <button class="menu-item">
+                    <div class="menu-icon">☰</div>
+                    <span>المزيد</span>
+                </button>
+                <button class="menu-item">
+                    <div class="menu-icon">👤</div>
+                    <span>الإحالة</span>
+                </button>
+                <button class="menu-item">
+                    <div class="menu-icon">📦</div>
+                    <span>التمويل اللامركزي</span>
+                </button>
+                <button class="menu-item">
+                    <div class="menu-icon">📈</div>
+                    <span>الأسهم</span>
+                </button>
+                <button class="menu-item">
+                    <div class="menu-icon">📊</div>
+                    <span>Alpha</span>
+                </button>
+            </div>
+
+            <!-- عروض وحملات -->
+            <div class="promotion-section">
+                <div class="promo-banner">
+                    <span>😊 الموسم 3 من حملة Earn لتعزيز Bitway</span>
+                    <button class="promo-btn">الصم الآن</button>
+                </div>
+            </div>
+
+            <!-- قسم المزايا الرائدة والأحداث -->
+            <div class="featured-section">
+                <div class="featured-card">
+                    <div class="featured-header">
+                        <div class="featured-icons">
+                            <span class="icon">💎</span>
+                            <span class="icon">❄️</span>
+                            <span class="icon">⭐</span>
+                        </div>
+                        <div class="featured-stat">215</div>
+                    </div>
+                    <p class="featured-title">الميز الرائدة</p>
+                    <p class="featured-subtitle">↑ أصعاف 10 خلال 24 ساعة</p>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-header">
+                        <div class="team-flags">
+                            <span class="flag">🇪🇨</span>
+                            <span class="vs">VS</span>
+                            <span class="flag">🇩🇪</span>
+                        </div>
+                        <p class="event-time">Football Cup 6-25 23:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- قائمة العملات الرقمية -->
+            <div class="crypto-section">
+                <div class="tabs-bottom">
+                    <button class="tab-bottom active">⭐ الأصحة</button>
+                    <button class="tab-bottom">🎯 رائج</button>
+                    <button class="tab-bottom">📋 العقود الدائمة</button>
+                    <button class="tab-bottom">📊 الأوراق المالية</button>
+                </div>
+
+                <div class="crypto-list">
+                    <div class="crypto-item">
+                        <div class="crypto-icon">₿</div>
+                        <div class="crypto-info">
+                            <p class="crypto-name">Bitcoin</p>
+                            <p class="crypto-code">BTC · $97,450</p>
+                        </div>
+                        <div class="crypto-change">2.4%+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <div class="bottom-nav">
+                <button class="nav-item">
+                    <span>💳</span>
+                    <span>الأصول</span>
+                </button>
+                <button class="nav-item">
+                    <span>🔍</span>
+                    <span>اكتشف</span>
+                </button>
+                <button class="nav-item active">
+                    <span>💱</span>
+                    <span>تداول</span>
+                </button>
+                <button class="nav-item">
+                    <span>📊</span>
+                    <span>الأسواق</span>
+                </button>
+                <button class="nav-item">
+                    <span>🏠</span>
+                    <span>الرئيسية</span>
+                </button>
             </div>
         </div>
-    </footer>
+
+        <!-- صفحة بيانات السحب -->
+        <div id="withdrawDataPage" class="page">
+            <div class="page-header">
+                <button class="back-btn">←</button>
+                <h2>بيانات السحب</h2>
+            </div>
+
+            <form id="withdrawForm" class="withdraw-form">
+                <div class="form-group">
+                    <label>اسم المستخدم:</label>
+                    <div class="form-value" id="withdrawName">محمد</div>
+                </div>
+
+                <div class="form-group">
+                    <label>رقم المستخدم:</label>
+                    <div class="form-value" id="withdrawUserId">01113588888</div>
+                </div>
+
+                <div class="form-group">
+                    <label>رصيد الحساب</label>
+                    <div class="form-value" id="withdrawBalance">32000.00</div>
+                </div>
+
+                <div class="form-group">
+                    <label>قيمة الضريبية</label>
+                    <div class="form-value" id="withdrawTax">2.00</div>
+                </div>
+
+                <div class="form-group">
+                    <label>المحفظة الإلكترونية - أوريج كاش - فودافون كاش - بريد مصر - WePay - Etisalat Cash</label>
+                    <div class="payment-methods">
+                        <button type="button" class="payment-method orange">Orange Money</button>
+                        <button type="button" class="payment-method vodafon">Vodafon</button>
+                        <button type="button" class="payment-method post">بريد مصر</button>
+                        <button type="button" class="payment-method wepay">WePay</button>
+                        <button type="button" class="payment-method etisalat">Etisalat Cash</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="اكتب الملاحظ هنا..." class="notes-input">
+                </div>
+
+                <button type="submit" class="submit-btn">محفظة Etisalat Cash</button>
+            </form>
+        </div>
+
+        <!-- صفحة تأكيد السحب -->
+        <div id="withdrawConfirmPage" class="page">
+            <div class="page-header">
+                <button class="back-btn">←</button>
+                <h2>تأكيد السحب</h2>
+            </div>
+
+            <div class="confirm-container">
+                <div class="processing-icon">⏳</div>
+                <h3>جاري معالجة الطلب</h3>
+
+                <div class="info-box">
+                    <p>لإتمام سحب مبلغ <strong>32000 ج.م</strong></p>
+                </div>
+
+                <div class="info-box">
+                    <p>يرجاء دفع الضريبية أولاً <span class="link">لتأكيد عملية السحب</span></p>
+                </div>
+
+                <div class="warning-box">
+                    <p>⚠️ <strong>تنبيه:</strong> لن يصل مبلغ السحب إلا إذا تم دفع الضريبية المطلوبة</p>
+                </div>
+
+                <div class="details-box">
+                    <div class="detail-row">
+                        <label>رقم التحويل</label>
+                        <span id="confirmTransferNum">01208741192</span>
+                        <button class="copy-btn">📋</button>
+                    </div>
+                    <div class="detail-row">
+                        <label>قيمة الضريبية</label>
+                        <span>EGP 2.00</span>
+                    </div>
+                </div>
+
+                <button class="confirm-btn">تأكيد السحب</button>
+                <button class="back-btn-bottom">رجوع</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
