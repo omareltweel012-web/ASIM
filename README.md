@@ -1,63 +1,76 @@
-# عسيم - ASIM
-## موقع خدمات صحية متقدمة
+# 📝 To-Do List Application
 
-### 🏥 نبذة عن الموقع
-عسيم هو موقع خدمات صحية شامل يوفر:
-- استشارات طبية متخصصة
-- صيدلية إلكترونية
-- تحاليل طبية
-- خدمات إسعاف سريعة
-- دعم نفسي متخصص
-- رعاية صحية للأطفال
+A simple, elegant, and functional to-do list application with local storage functionality.
 
-### 🎨 المزايا
-- تصميم عصري وسهل الاستخدام
-- واجهة ثنائية الاتجاه (RTL) مدعومة للغة العربية
-- متجاوب مع جميع الأجهزة (Responsive)
-- تأثيرات بصرية سلسة
-- نموذج تواصل فعال
-- معلومات الأطباء والخدمات محدثة
+## ✨ Features
 
-### 📁 هيكل الملفات
+- ✅ **Add Tasks** - Easily add new tasks to your list
+- ✅ **Mark Complete** - Check off tasks as you complete them
+- ✅ **Delete Tasks** - Remove tasks you no longer need
+- ✅ **Filter Tasks** - View all, active, or completed tasks
+- ✅ **Local Storage** - Your tasks are saved automatically in your browser
+- ✅ **Statistics** - See total and completed task counts
+- ✅ **Responsive Design** - Works perfectly on desktop and mobile devices
+- ✅ **Clean UI** - Modern, user-friendly interface with smooth animations
+
+## 🚀 How to Use
+
+1. Open `index.html` in your web browser
+2. Type a task in the input field
+3. Click "Add Task" or press Enter
+4. Check the checkbox to mark tasks as complete
+5. Use filter buttons to view specific tasks
+6. Click "Delete" to remove a task
+7. Click "Clear Completed" to remove all completed tasks
+
+## 📂 File Structure
+
 ```
-ASIM/
-├── index.html      # الصفحة الرئيسية
-├── style.css       # ملف التصميم والأنماط
-├── script.js       # ملف JavaScript للتفاعليات
-└── README.md       # ملف التوثيق
+├── index.html      # HTML structure
+├── style.css       # Styling and animations
+├── script.js       # Application logic
+└── README.md       # Documentation
 ```
 
-### 🚀 التشغيل
-1. انسخ الملفات إلى مجلد محلي
-2. افتح ملف `index.html` في المتصفح
-3. أو قم بنشر الملفات على أي خادم ويب
+## 💾 Local Storage
 
-### 📋 الأقسام الرئيسية
-- **الرئيسية**: صفحة ترحيب بمعلومات عن الموقع
-- **الخدمات**: عرض شامل للخدمات الطبية المتاحة
-- **الأطباء**: معلومات عن فريق الأطباء المتخصصين
-- **تواصل معنا**: نموذج للتواصل والعنوان والهاتف
+Your tasks are automatically saved to your browser's local storage. This means:
+- Tasks persist even after closing the browser
+- Data is stored locally on your device
+- No internet connection needed to access your tasks
+- Clear browser data to reset the application
 
-### 📱 التوافقية
-- ✅ Chrome, Firefox, Safari, Edge
-- ✅ الهواتف الذكية والأجهزة اللوحية
-- ✅ سطح المكتب
+## 🎨 Design Features
 
-### 🎯 التطويرات المستقبلية
-- [ ] نظام حجز المواعيد
-- [ ] تطبيق جوال
-- [ ] نظام إدارة المرضى
-- [ ] دفع إلكتروني
-- [ ] تقييمات المرضى
+- **Beautiful Gradient Background** - Purple gradient background
+- **Smooth Animations** - Fade-in and slide animations
+- **Hover Effects** - Interactive elements respond to user actions
+- **Custom Scrollbar** - Styled scrollbar for better aesthetics
+- **Responsive Layout** - Adapts to different screen sizes
 
-### 📞 معلومات التواصل
-- **الهاتف**: +966 12 345 6789
-- **البريد**: info@asim-health.com
-- **العنوان**: الرياض - حي الملز
+## 📊 Statistics
 
-### 📝 الترخيص
-جميع الحقوق محفوظة © 2024 عسيم
+- **Total Count** - Shows total number of tasks
+- **Completed Count** - Shows number of completed tasks
+- **Clear Completed** - Button to quickly delete all completed tasks
+
+## 🌐 Browser Compatibility
+
+- ✅ Chrome/Chromium
+- ✅ Firefox
+- ✅ Safari
+- ✅ Edge
+- ✅ Mobile browsers
+
+## 🎯 Keyboard Shortcuts
+
+- **Enter** - Add a new task when focused on the input field
+- **Tab** - Navigate through elements
+
+## 🔒 Privacy
+
+All data is stored locally in your browser. No data is sent to any server or external service.
 
 ---
 
-**تم إنشاء هذا الموقع لتقديم خدمات صحية جودة عالية وموثوقة.**
+**Happy task managing! 🎉**
