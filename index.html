@@ -1,146 +1,51 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عسيم - خدمات صحية متقدمة</title>
+    <title>Random Joke Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">عسيم</div>
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#services">الخدمات</a></li>
-                <li><a href="#doctors">الأطباء</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container">
+        <div class="joke-wrapper">
+            <div class="header">
+                <h1>😂 Joke Generator</h1>
+                <p>Get a random laugh whenever you need one!</p>
+            </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>مرحباً بك في عسيم</h1>
-            <p>خدمات صحية متقدمة وموثوقة لصحتك وصحة عائلتك</p>
-            <button class="btn btn-primary">احجز موعداً الآن</button>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>خدماتنا</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon">🏥</div>
-                    <h3>الاستشارات الطبية</h3>
-                    <p>استشارات طبية متخصصة من أفضل ال��طباء</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">💊</div>
-                    <h3>الصيدلية الإلكترونية</h3>
-                    <p>توصيل الأدوية مباشرة إلى منزلك</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">🧬</div>
-                    <h3>التحاليل الطبية</h3>
-                    <p>تحاليل دقيقة وسريعة النتائج</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">🚑</div>
-                    <h3>الإسعافات الأولية</h3>
-                    <p>خدمة إسعاف سريعة على مدار الساعة</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">🧘</div>
-                    <h3>الصحة النفسية</h3>
-                    <p>دعم نفسي واستشارات متخصصة</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon">👶</div>
-                    <h3>رعاية الأطفال</h3>
-                    <p>متابعة صحية شاملة للأطفال</p>
+            <div class="joke-display">
+                <div id="jokeContent" class="joke-content">
+                    <p class="placeholder">Click the button below to get a joke...</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Doctors Section -->
-    <section id="doctors" class="doctors">
-        <div class="container">
-            <h2>فريقنا الطبي</h2>
-            <div class="doctors-grid">
-                <div class="doctor-card">
-                    <div class="doctor-image">👨‍⚕️</div>
-                    <h3>د. أحمد علي</h3>
-                    <p>أخصائي القلب</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="doctor-card">
-                    <div class="doctor-image">👩‍⚕️</div>
-                    <h3>د. فاطمة محمود</h3>
-                    <p>أخصائية الأطفال</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="doctor-card">
-                    <div class="doctor-image">👨‍⚕️</div>
-                    <h3>د. محمد حسن</h3>
-                    <p>أخصائي الجراحة</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <div class="doctor-card">
-                    <div class="doctor-image">👩‍⚕️</div>
-                    <h3>د. ليلى إبراهيم</h3>
-                    <p>أخصائية النساء والتوليد</p>
-                    <div class="rating">⭐⭐⭐⭐⭐</div>
-                </div>
+            <div class="button-section">
+                <button id="getJokeBtn" class="get-joke-btn">Get Joke</button>
+                <button id="shareBtn" class="share-btn" style="display: none;">Share</button>
+            </div>
+
+            <div class="category-section">
+                <label for="categorySelect">Select Category:</label>
+                <select id="categorySelect" class="category-select">
+                    <option value="any">Any Category</option>
+                    <option value="general">General</option>
+                    <option value="programming">Programming</option>
+                    <option value="knock-knock">Knock Knock</option>
+                </select>
+            </div>
+
+            <div class="stats">
+                <p>Jokes Loaded: <span id="jokeCount">0</span></p>
+                <button id="clearHistoryBtn" class="clear-history-btn">Clear History</button>
+            </div>
+
+            <div id="jokeHistory" class="joke-history">
+                <h3>📚 Joke History</h3>
+                <ul id="historyList" class="history-list"></ul>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>تواصل معنا</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <h4>📞 الهاتف</h4>
-                        <p>+966 12 345 6789</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>📧 البريد الإلكتروني</h4>
-                        <p>info@asim-health.com</p>
-                    </div>
-                    <div class="info-item">
-                        <h4>📍 العنوان</h4>
-                        <p>الرياض - حي الملز</p>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="اسمك" required>
-                    <input type="email" placeholder="بريدك الإلكتروني" required>
-                    <textarea placeholder="رسالتك" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">إرسال</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 عسيم - خدمات صحية متقدمة. جميع الحقوق محفوظة.</p>
-            <div class="social-links">
-                <a href="#">فيسبوك</a>
-                <a href="#">تويتر</a>
-                <a href="#">إنستجرام</a>
-            </div>
-        </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
